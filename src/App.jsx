@@ -5,7 +5,7 @@ import Footer from "./components/footer/Footer";
 import Home from "./pages/Home";
 import ProductDetail from "./pages/ProductDetail";
 import CategoryPage from "./pages/Category";
-import Navbar from './components/Navbar/Navbar';
+import Navbar from "./components/navbar/Navbar";
 import './App.css';
 
 const App = () => {

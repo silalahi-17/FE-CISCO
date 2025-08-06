@@ -66,9 +66,6 @@ const Home =() => {
             <div className="inline-flex items-center justify-center p-2 bg-gradient-to-r from-indigo-500 to-purple-600 rounded-full mb-6">
               <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             </div>
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 bg-clip-text text-transparent mb-4">
-              Featured Products
-            </h2>
           </div>
 
           {/* Products Grid with enhanced container */}

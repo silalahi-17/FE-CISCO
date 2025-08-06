@@ -1,0 +1,53 @@
+@keyframes shimmer {
+          0% { transform: translateX(-100%) skewX(-12deg); }
+          100% { transform: translateX(200vw) skewX(-12deg); }
+        }
+        
+        .animate-shimmer {
+          animation: shimmer 3s ease-in-out infinite;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+          width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+          background: #f1f5f9;
+        }
+        
+        ::-webkit-scrollbar-thumb {
+          background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+          border-radius: 4px;
+        }
+        
+        ::-webkit-scrollbar-thumb:hover {
+          background: linear-gradient(to bottom, #4f46e5, #7c3aed);
+        }
+
+        /* Focus outline improvements */
+        *:focus {
+          outline: 2px solid #6366f1;
+          outline-offset: 2px;
+        }
+
+        /* Smooth transitions for route changes */
+        .page-transition-enter {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        
+        .page-transition-enter-active {
+          opacity: 1;
+          transform: translateY(0);
+          transition: opacity 300ms, transform 300ms;
+        }
+        
+        .page-transition-exit {
+          opacity: 1;
+        }
+        
+        .page-transition-exit-active {
+          opacity: 0;
+          transition: opacity 300ms;
+        }

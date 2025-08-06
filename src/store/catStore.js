@@ -1,5 +1,6 @@
 import { create } from "zustand";
 import {slugify} from "../utils/slugify";
+import { ENDPOINTS } from "../config/api";
 
 const useCatStore = create((set) => ({
   categories: [],
@@ -9,7 +10,7 @@ const useCatStore = create((set) => ({
   fetchCategories: async () => {
     set({ isLoading: true, error: null });
     try {
-      const response = await fetch("https://sistemtoko.com/public/demo/cat");
+      const response = await fetch(ENDPOINTS.cats);
       if (!response.ok) {
         throw new Error("Gagal mengambil kategori");
       }

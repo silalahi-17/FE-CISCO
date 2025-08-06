@@ -1,5 +1,6 @@
 // productStore.js
 import { create } from 'zustand'
+import { ENDPOINTS } from '../config/api';
 
 const  useProductStore = create((set, get) => ({
   products: [],
@@ -10,7 +11,7 @@ const  useProductStore = create((set, get) => ({
     set({ loading: true, error: null })
 
     try {
-      const res = await fetch('https://sistemtoko.com/public/demo/product')
+      const res = await fetch(ENDPOINTS.products)
       const json = await res.json()
 
       const parentProducts = (json.aaData || []).filter(p=> p.type === 'parent')
